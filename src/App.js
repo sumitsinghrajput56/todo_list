@@ -21,7 +21,7 @@ function App() {
   }
   let list=todolist.map((value,index)=>{
     return(
-      <TodoListItems value={value}/>
+      <TodoListItems value={value} key={index} indexNumber={index} todolist={todolist} setTodolist={setTodolist}/>
     )
   })
   return (
@@ -44,10 +44,15 @@ function App() {
 
 export default App;
 
-function TodoListItems({value})
+function TodoListItems({value,indexNumber,todolist,setTodolist})
 {
+    let deleteRow=()=>{
+      let finalData=todolist.filter((v,i)=>i!=indexNumber);
+        setTodolist(finalData);
+      
+    }
     return(
-          <li>{value} <span>&times;</span></li>
+          <li>{indexNumber+1}{value} <span onClick={deleteRow}>&times;</span></li>
 
     )
 }
