@@ -19,6 +19,11 @@ function App() {
       alert("todolist already exist");
     }
   }
+  let list=todolist.map((value,index)=>{
+    return(
+      <TodoListItems value={value}/>
+    )
+  })
   return (
     <div className="App">
       <h1>Todo List</h1>
@@ -27,11 +32,22 @@ function App() {
       </form>
       <div className='outerDiv'>
         <ul>
-          <li>HTML <span>&times;</span></li>
+          {
+            list
+          }
         </ul>
       </div>
     </div>
   );
 }
 
+
 export default App;
+
+function TodoListItems({value})
+{
+    return(
+          <li>{value} <span>&times;</span></li>
+
+    )
+}
