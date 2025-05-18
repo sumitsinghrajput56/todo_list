@@ -71,7 +71,7 @@ form button
   padding: 10px;
   background-color: black;
   color: white;
-  text-align: center;
+  text-align: left;
   position: relative;
   font-size: 25px;
   margin-bottom: 20px;
@@ -82,4 +82,9 @@ form button
   position: absolute;
   right: 20px;
   cursor: pointer;
+}
+.completetodo{
+  text-decoration: line-through;
+  color: red;
+  background-color: yellow !important;
 }
