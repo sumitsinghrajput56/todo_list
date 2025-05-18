@@ -4,7 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      <h1>Todo List</h1>
+      <form>
+        <input type="text"/><button>save</button>
+      </form>
     </div>
   );
 }
